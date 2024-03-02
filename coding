@@ -1,0 +1,215 @@
+### Welcome to the python-codeing wiki!
+
+-----------------------------------------------------------------
+###  Accept two numbers and print the greatest between them**
+  
+a =input("Enter 1st number : ")
+b = input("Enter your 2nd Number : ")
+    
+if( a > b ):
+    print(f"{a} is grater than {b}" )
+elif( b > a ):
+    print(f"{b} is grater than {a}")
+else:
+    print(f"{a} and  {b} both are equal")
+-----------------------------------------------------
+
+###  * Accept the gender from the user as char and print the respective greeting message
+### Ex - Good Morning Sir (on the basis of gender)
+
+gender = input("Enter Your Gender (Male/Female) : ")
+
+if (gender == "Male" or gender == "m"):
+    print("Good Morning,sir..!!")
+elif(gender == "Female" or gender == "f"):
+    print("Good Morning,mam..!!")
+else:
+    print("Wrong Text..!!")
+
+--------------------------------------------
+    
+#### Accept an integer and check whether it is an even number or odd.
+
+int = int(input("Enter a integer : "))
+
+if ( int % 2 == 0):
+    print("Number is Even")
+if ( int % 2 != 0):
+    print("Number is odd")
+------------------------------------------------
+      
+## Accept name and age from the user. Check if the user is a valid voter or not.
+
+Name = input("Enter Your Name : ")
+age = int(input("Enter Your Age : "))
+
+if age < 18:
+    print("You are not valid for Vote..!!")
+else:
+    print("You are valid for Vote..!!")
+-----------------------------------------------------
+  
+### Accept a year and check if it a leap year or not
+
+year = int(input("Enter any Year : "))
+
+if year%4 == 0 and year%100 != 0:
+    print(f"{year} is Leap Year..!!")
+elif year%100 == 0 and year%400 == 0:
+    print(f"{year} is Leap Year..!!")
+else:
+    print(f"{year} is not Leap Year..!!")
+
+----------------------------------------------------------
+### Accept an English alphabet from user and check if it is a consonant or a vowel
+
+z = (input("Enter any Alphabet : "))
+if z in "aeiouAEIOU0":
+    print(f"{z} is a vowel..!!")
+else:
+     print(f"{z} is NOT a vowel..!!")
+------------------------------------------------------------------------
+###Loops question
+------------------------------------------------------------------------
+  
+#### 1) Print natural number up to n.
+
+n = int(input("Enter a number: "))
+
+for i in range (0,n+1):
+    print(i)
+
+------------------------------------------------------------------------
+### 2) Reverse for loop. Print n to 1.
+
+n = int(input("Enter a number: "))
+
+for i in range (n+1,0,-1):
+    print(i)
+------------------------------------------------------------------------
+3) Take a number as input and print its table
+5 * 1 = 5
+5 * 2 = 10 ... up to 10 terms.
+
+n = int(input("Enter a number: "))
+
+for i in range (1,11):
+    print(f"{n} * {i} = {n*i} )
+  
+------------------------------------------------------------------------
+4) Factorial of a number.
+
+n = int(input("Enter a number: "))
+fac = 1
+for i in range (1,n+1):
+    fac*=i
+print(fac)
+------------------------------------------------------------------------
+5) Sum up to n terms.
+
+n = int(input("Enter a number: "))
+sum = 0
+for i in range (1,n+1):
+    sum+=i
+print(sum)
+------------------------------------------------------------------------
+6) print all factors of a given number:
+
+n = int(input("Enter a number : "))
+
+for i in range(1,n+1):
+   if n % i == 0:
+      print(i)
+
+------------------------------------------------------------------------
+7) Accept a number and check if it a perfect number or not.
+A number whose sum of factors(excluding number itself)
+= Number
+Ex - 6 = 1, 2, 3 = 6
+
+n = int(input("Enter a number: "))
+sum = 0
+print(f"All the factors of {n} are: ")
+for i in range (1,n):
+    if n%i==0:
+        sum+=i
+        print(i , end=" ")
+    
+print("\nsum of factors is :",sum)
+if sum == n:
+    print(f"\n{n} is a perfect number")
+else:
+    print(f"\n{n}  is not a perfect number")
+
+
+------------------------------------------------------------------------
+8) Check if the number is Prime or not.
+///////////////////////////////////////////////
+i> using count :  
+
+n = int(input("Enter a number : "))
+
+count= 0
+  
+for i in range(1,n+1):
+   if n % i == 0:
+        count= count + =1
+        
+if count == 2:
+    print(f"{n} is a prime number.")
+else:
+    print(f"{n} is not a prime number.")
+
+//////////////////////////////////////////////
+  
+ii> using sum method : 
+
+n = int(input("Enter a number : "))
+sum = 0
+for i in range(1,n+1):
+   if n % i == 0:
+        sum = sum + i
+  
+if sum == (1+n):
+    print(f"{n} is a prime number.")
+else:
+    print(f"{n} is not a prime number.")
+
+  
+------------------------------------------------------------------------
+9) Seprate each digit of a number and print it on the new line
+
+  n = 256
+
+while n>0:
+    a = n % 10
+    n = n // 10
+    print(a)
+
+------------------------------------------------------------------------
+10) Accept a number and check if it is a pallind omic number
+(If number and its reverse are equal)
+Ex - 12321 - Reverse - 12321
+
+  # a = int(input("enter a number : "))
+a = "121"
+temp = a[::-1]
+
+if temp == a:
+    print("y")
+else:
+    print("n")
+
+b=121
+c=b
+p=0
+while(b>0):
+    k=b%10
+    p= p*10+k
+    b = b//10
+    
+if c == p:
+     print("palindrom")
+else:
+    print("not palindrom")
+------------------------------------------------------------------------
